@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import { ethers } from "ethers";
-import json_ from "../../../../backend/artifacts/contracts/Voting.sol/Voting.json";
+// import json_ from "../../../../backend/artifacts/contracts/Voting.sol/Voting.json";
+import json_ from "../../contracts/Voting.json";
 import { contractAddress } from "../../assets/Constant";
 const abi = json_.abi;
 

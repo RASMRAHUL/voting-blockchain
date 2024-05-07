@@ -1,6 +1,6 @@
 import React from "react";
 import { ethers } from "ethers";
-import JSON from "../../../../backend/artifacts/contracts/Voting.sol/Voting.json";
+import JSON from "../../contracts/Voting.json";
 import { contractAddress } from "../../assets/Constant";
 const abi = JSON.abi;
 

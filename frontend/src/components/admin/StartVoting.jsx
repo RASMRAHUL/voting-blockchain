@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 // import { setWinnerAddress } from "../Redux/slices/winnerAddress";
 import { ethers } from "ethers";
-import JSON from "../../../../backend/artifacts/contracts/Voting.sol/Voting.json";
+import JSON from "../../contracts/Voting.json";
 import { contractAddress } from "../../assets/Constant";
 const abi = JSON.abi;
 

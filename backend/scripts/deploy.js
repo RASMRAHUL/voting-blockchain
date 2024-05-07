@@ -37,6 +37,7 @@ function saveFrontendFiles(voting) {
   const contractsDir = path.join(
     __dirname,
     "..",
+    "..",
     "frontend",
     "src",
     "contracts"
@@ -65,3 +66,9 @@ main()
     console.error(error);
     process.exit(1);
   });
+
+// npx hardhat run scripts/deploy.js --network "sepolia"
+// npx hardhat verify 0xBeD8F989b8a7887FA82Af43F0303c8EF23F0FaDb --network "sepolia"
+
+//  last contract address  0x37c5B8Bef154AB48E71e82e8c66Df978F9E0dAa6
+// contract address  0xBeD8F989b8a7887FA82Af43F0303c8EF23F0FaDb

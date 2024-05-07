@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { ethers } from "ethers";
 import UserHeader from "./UserHeader";
 // import AddVoter from "../admin/AddVoter";
-import JSON from "../../../../backend/artifacts/contracts/Voting.sol/Voting.json";
+import JSON from "../../contracts/Voting.json";
 import { contractAddress } from "../../assets/Constant";
 // import CandidateCard from "./CandidateCard";
 import Polling from "./Polling";

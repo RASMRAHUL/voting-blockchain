@@ -1,7 +1,7 @@
 import React from "react";
 import candidate from "../../assets/candidate.png";
 import { ethers } from "ethers";
-import JSON from "../../../../backend/artifacts/contracts/Voting.sol/Voting.json";
+import JSON from "../../contracts/Voting.json";
 import { contractAddress } from "../../assets/Constant";
 const abi = JSON.abi;
 function CandidateCard({ address, name, party }) {

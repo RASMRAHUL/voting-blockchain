@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { ethers } from "ethers";
-import JSON from "../../../../backend/artifacts/contracts/Voting.sol/Voting.json";
+import json_ from "../../contracts/Voting.json";
 import { contractAddress } from "../../assets/Constant";
-const abi = JSON.abi;
+const abi = json_.abi;
 // import WinnerCard from "../user/WinnerCard";
 
 // import { ethers } from "ethers";

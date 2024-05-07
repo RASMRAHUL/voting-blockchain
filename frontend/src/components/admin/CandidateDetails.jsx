@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import AddCandidate from "./AddCandidate";
 import { ethers } from "ethers";
-import JSON from "../../../../backend/artifacts/contracts/Voting.sol/Voting.json";
+import json_ from "../../contracts/Voting.json";
 import { contractAddress } from "../../assets/Constant";
 import Polling from "../user/Polling";
 // import CandidateCard from "../user/CandidateCard";
-const abi = JSON.abi;
+const abi = json_.abi;
 
 function CandidateDetails() {
   const [candidates, setCandidates] = useState([]);
