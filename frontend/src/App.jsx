@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { useSelector } from "react-redux";
+import ConnectWallet from "./components/ConnectWallet";
+// import { ownerAddress } from "./assets/Constant";
+import Design from "./assets/Designer.png";
+import AdminOrUser from "./components/AdminOrUser";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const address = useSelector((store) => store.address);
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+  return address === null ? (
+    <div className="h-screen flex flex-col justify-center items-center bg-[#1fadff] m-0 p-0 box-border">
+      <ConnectWallet />
+      <div className="relative">
+        <img
+          className="w-[80vw] h-[96vh] blur-sm"
+          src={Design}
+          alt="Home Image"
+        />
+        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-[#1fadff] font-bold text-8xl [text-shadow:_0_4px_0_rgb(33_255_55_/_100%)]">
+          Blockchain Voting System
+        </h1>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  ) : (
+    <AdminOrUser />
+  );
 }
 
-export default App
+export default App;
